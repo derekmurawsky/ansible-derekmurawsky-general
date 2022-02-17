@@ -45,10 +45,10 @@ tags:
 repository: https://github.com/derekmurawsky/ansible-derekmurawsky-general
 
 # The URL to any online docs
-documentation: https://github.com/derekmurawsky/ansible-derekmurawsky-general
+documentation: https://derekmurawsky.github.io/ansible-derekmurawsky-general/
 
 # The URL to the homepage of the collection/project
-homepage: https://github.com/derekmurawsky/ansible-derekmurawsky-general
+homepage: https://derekmurawsky.github.io/ansible-derekmurawsky-general/
 
 # The URL to the collection issue tracker
 issues: https://github.com/derekmurawsky/ansible-derekmurawsky-general/issues

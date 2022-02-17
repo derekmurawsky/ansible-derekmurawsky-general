@@ -1,4 +1,4 @@
-# Use MKDocs with the MonoRepo plugin
+# Use MKDocs, MKDocs-Material, and MKDocs-Monorepo for documentation
 
 - Status: accepted
 - Deciders: Derek Murawsky
