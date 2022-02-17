@@ -15,13 +15,13 @@
   ansible.builtin.template:
     src: nginx.conf.j2
     dest: /etc/nginx/conf.d/proxmox.conf
-    backup: yes
+    backup: true
   notify:
     - Restart nginx
 
 # Ensure nginx starts after pve-cluster.service so it can get it's certificates
 - name: Ensures /etc/systemd/system/nginx.service.d/ dir exists
-  ansible.builtin.file: 
+  ansible.builtin.file:
     path: /etc/systemd/system/nginx.service.d/
     state: directory
 

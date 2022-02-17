@@ -1,6 +1,6 @@
 # Ansible_Bootstrap
 
-A simple role to help bootstrap a linux server for ansible management. It provisions a user, adds the user to the sudoers group, and configures passwordless sudo for that user.
+A simple role to help bootstrap a linux server for ansible management. It provisions a user, adds the user to the sudoers group, and configures password-less sudo for that user.
 
 ## Requirements
 

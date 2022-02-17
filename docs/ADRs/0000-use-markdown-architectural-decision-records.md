@@ -24,5 +24,3 @@ Chosen option: "MADR 2.1.2", because
 * The MADR structure is comprehensible and facilitates usage & maintenance.
 * The MADR project is vivid.
 * Version 2.1.2 is the latest one available when starting to document ADRs.
-
-<!-- markdownlint-disable-file MD013 -->

@@ -3,11 +3,11 @@
 The following playbooks are bundled with this collection.
 
 !!! note
-    All playbooks in this bundle target all hosts by default. You can target specific hosts by passing `-e 'target=hostname-or-group'` on the command line to override this behaviour.
+    All playbooks in this bundle target all hosts by default. You can target specific hosts by passing `-e 'target=hostname-or-group'` on the command line to override this behavior.
 
 ## bootstrap
 
-A *very* simple playbook that will use the collections bootstrap role to bootstap all targetted hosts for ansible management.
+A *very* simple playbook that will use the collections bootstrap role to bootstrap all targeted hosts for ansible management.
 
 !!! warning
 
@@ -15,4 +15,4 @@ A *very* simple playbook that will use the collections bootstrap role to bootsta
 
 ## proxmox
 
-A simple playbook that will apply the proxmox roles from this collection to all targetted hosts.
+A simple playbook that will apply the proxmox roles from this collection to all targeted hosts.

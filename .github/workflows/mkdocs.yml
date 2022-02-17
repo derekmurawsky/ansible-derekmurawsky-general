@@ -5,18 +5,6 @@ on:
       - master 
       - main
 jobs:
-  lint-docs:
-    name: Lint changelog file
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-
-    - name: Lint changelog file
-      uses: avto-dev/markdown-lint@v1
-      with:
-        rules: '/lint/rules/changelog.js'
-
   deploy_docs:
     name: Deploy documentation
     runs-on: ubuntu-latest

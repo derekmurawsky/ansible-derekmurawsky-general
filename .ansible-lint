@@ -1,0 +1,10 @@
+exclude_paths:
+  - .devcontainer/
+  - .github/
+  - .vscode/
+  - docs/
+  - '**/mkdocs.yml'
+  - 'mkdocs.yml'
+  - ./galaxy.yml
+  - ./.markdownlint.yaml
+  - ./.pre-commit-config.yaml

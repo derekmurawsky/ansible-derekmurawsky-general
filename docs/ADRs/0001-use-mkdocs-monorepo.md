@@ -4,7 +4,7 @@
 - Deciders: Derek Murawsky
 - Date: 2/17/2022
 
-Technical Story: Documentation is key for many reasons cheif among them being that I will forget how I did this in a year.
+Technical Story: Documentation is key for many reasons chief among them being that I will forget how I did this in a year.
 
 ## Context and Problem Statement
 
@@ -39,5 +39,3 @@ Chosen option: MKDocs with Material
 - [MKDocs](https://www.mkdocs.org/)
 - [MKDocs Material](https://squidfunk.github.io/mkdocs-material/)
 - [MKDocs Monorepo](https://github.com/backstage/mkdocs-monorepo-plugin) plugin.
-
-<!-- markdownlint-disable-file MD013 -->
