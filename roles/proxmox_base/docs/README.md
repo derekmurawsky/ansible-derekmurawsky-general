@@ -14,7 +14,7 @@ None
 
 ## Dependencies
 
-None
+- community.general
 
 ## Example Playbook
 

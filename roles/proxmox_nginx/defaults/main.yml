@@ -1,1 +1,3 @@
 ---
+proxmox_nginx_ssl_certificate: '/etc/pve/local/pve-ssl.pem'
+proxmox_nginx_ssl_certificate_key: '/etc/pve/local/pve-ssl.key'

@@ -9,6 +9,7 @@
         "csscompressor",
         "dateutil",
         "derekmurawsky",
+        "devcontainer",
         "distlib",
         "filelock",
         "homelab",

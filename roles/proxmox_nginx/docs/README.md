@@ -8,7 +8,10 @@ None
 
 ## Role Variables
 
-None - This uses the server's name in your ansible inventory as the FQDN for the nginx config.
+| Variable                          | Default                    | Description                        |
+| --------------------------------- | -------------------------- | ---------------------------------- |
+| proxmox_nginx_ssl_certificate     | /etc/pve/local/pve-ssl.pem | Path to the server certificate     |
+| proxmox_nginx_ssl_certificate_key | /etc/pve/local/pve-ssl.key | Path to the server certificate key |
 
 ## Dependencies
 

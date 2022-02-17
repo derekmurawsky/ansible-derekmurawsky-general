@@ -1,6 +1,4 @@
 ---
-# tasks file for ansible_bootstrap
-
 - name: Create ansible user
   ansible.builtin.user:
     name: "{{ bootstrap_user_name }}"
@@ -15,7 +13,7 @@
 
 # Adapted from: https://github.com/sdarwin/Ansible-Bootstrap/blob/master/tasks/main.yml
 - name: Configure sudoers
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/sudoers.d/{{ bootstrap_user_name }}
     line: "{{ bootstrap_user_name }} ALL=(ALL) NOPASSWD:ALL"
     mode: 0440
