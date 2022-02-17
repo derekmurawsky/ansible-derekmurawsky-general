@@ -1,0 +1,5 @@
+site_name: "DerekMurawsky.General - proxmox_nginx role"
+theme: material
+
+nav:
+  - Overview: README.md

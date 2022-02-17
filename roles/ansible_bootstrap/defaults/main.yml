@@ -1,0 +1,6 @@
+---
+# defaults file for ansible_bootstrap
+bootstrap_user_name: ansible
+bootstrap_user_shell: /bin/bash
+bootstrap_user_ssh_pubkey: ""
+bootstrap_user_sudo_group: sudo

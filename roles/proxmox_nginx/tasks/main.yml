@@ -1,0 +1,33 @@
+---
+- name: Install nginx
+  apt:
+    name: nginx
+    state: present
+
+# Remove default config
+- name: Remove default nginx config
+  ansible.builtin.file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+# Setup new config
+- name: Install new nginx config
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/conf.d/proxmox.conf
+    backup: yes
+  notify:
+    - Restart nginx
+
+# Ensure nginx starts after pve-cluster.service so it can get it's certificates
+- name: Ensures /etc/systemd/system/nginx.service.d/ dir exists
+  ansible.builtin.file: 
+    path: /etc/systemd/system/nginx.service.d/
+    state: directory
+
+- name: Install nginx systemd override
+  ansible.builtin.template:
+    src: nginx.service.j2
+    dest: /etc/systemd/system/nginx.service.d/local.conf
+  notify:
+    - Restart nginx

@@ -1,0 +1,6 @@
+---
+- hosts: '{{ target | default("all")}}'
+  roles:
+    - proxmox_base
+    - proxmox_nginx
+  become: true

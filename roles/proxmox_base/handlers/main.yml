@@ -1,0 +1,6 @@
+---
+# handlers file for proxmox_base
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes

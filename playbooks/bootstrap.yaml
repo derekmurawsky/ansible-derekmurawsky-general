@@ -1,0 +1,8 @@
+---
+- hosts: '{{ target | default("all")}}'
+  vars:
+    current_user_pubkey: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    bootstrap_user_ssh_pubkey: "{{ pubkey | default(current_user_pubkey) }}"
+  roles:
+    - ansible_bootstrap
+  become: true

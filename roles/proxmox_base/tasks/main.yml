@@ -1,0 +1,35 @@
+---
+# Remove the enterprise update repostitory
+
+- name: Remove enterprise update repository
+  ansible.builtin.file:
+    path: /etc/apt/sources.list.d/pve-enterprise.list
+    state: absent
+
+# Add the unstable repo into the sources list
+
+- name: Add pve-no-subscription repository into sources list
+  ansible.builtin.apt_repository:
+    repo: deb http://download.proxmox.com/debian bullseye pve-no-subscription
+    filename: pve-no-subscription
+    state: present
+  when: proxmox_install_pve_no_subscription is true
+  notify:
+    - Update apt cache
+
+# Ensure the bridge interface is vlan aware
+- name: Make vmbr0 interface vlan aware
+  community.general.interfaces_file:
+    dest: /etc/network/interfaces
+    iface: vmbr0
+    option: bridge-vlan-aware
+    value: "yes"
+    state: present
+
+- name: Configure vmbr0 bridge vlan IDs
+  community.general.interfaces_file:
+    dest: /etc/network/interfaces
+    iface: vmbr0
+    option: bridge-vids
+    value: "2-4094"
+    state: present

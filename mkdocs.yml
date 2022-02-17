@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: DerekMurawsky.General Documentation
+theme: 
+  name: material
+  icon:
+    logo: material/ansible
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.indexes
+repo_url: https://github.com/derekmurawsky/ansible-derekmurawsky-general
+nav:
+  - Home: 'README.md'
+  - ADRs: "ADRs/README.md"
+  - Playbooks: 
+    - Overview: '!include ./playbooks/mkdocs.yml'
+  - Roles:
+    - ansible_bootstrap: '!include ./roles/ansible_bootstrap/mkdocs.yml'
+    - proxmox_base: '!include ./roles/proxmox_base/mkdocs.yml'
+    - proxmox_nginx: '!include ./roles/proxmox_nginx/mkdocs.yml'
+plugins:
+  - monorepo
+  - search
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+          remove_comments: true
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

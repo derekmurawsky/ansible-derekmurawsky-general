@@ -1,0 +1,24 @@
+---
+# tasks file for ansible_bootstrap
+
+- name: Create ansible user
+  ansible.builtin.user:
+    name: "{{ bootstrap_user_name }}"
+    shell: "{{ bootstrap_user_shell }}"
+    groups: "{{ bootstrap_user_sudo_group }}"
+
+- name: Add authorized key to ansible user
+  ansible.builtin.authorized_key:
+    user: ansible
+    key: "{{ bootstrap_user_ssh_pubkey }}"
+  when: bootstrap_user_ssh_pubkey is defined
+
+# Adapted from: https://github.com/sdarwin/Ansible-Bootstrap/blob/master/tasks/main.yml
+- name: Configure sudoers
+  lineinfile:
+    dest: /etc/sudoers.d/{{ bootstrap_user_name }}
+    line: "{{ bootstrap_user_name }} ALL=(ALL) NOPASSWD:ALL"
+    mode: 0440
+    state: present
+    create: true
+    validate: 'visudo -cf %s'
