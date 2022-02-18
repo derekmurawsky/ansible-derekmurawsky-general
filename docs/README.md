@@ -27,3 +27,23 @@ A role that does some baseline configuration on a proxmox server. It adds the pv
 ### proxmox_nginx
 
 A role that configures nginx as a reverse proxy on the proxmox server. It installs and configures nginx as a reverse proxy pointing to the proxmox server behind it. It utilizes ProxMox's default certificates.
+
+## Development
+
+The easiest way to work with this project is to git clone it and then open it with VSCode. This is a devcontainer enabled repo. Once the devcontainer is built once, it will run much faster in the future.
+
+### To build and test locally
+
+1. Create a `requirements.yml` that points to this module's directory.
+
+```yaml
+---
+collections:
+  - source: derekmurawsky/general
+    type: dir
+```
+
+2. Install the collection by running the command `ansible-galaxy collection install -r requirements.yml --force`.
+3. Any time you make a change to the code that you want to test, you must re-run the command from step 2
+
+<!-- markdownlint-disable-file MD029 -->

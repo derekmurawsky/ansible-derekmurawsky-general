@@ -6,12 +6,15 @@ theme:
     logo: material/ansible
   features:
     - navigation.instant
-    - navigation.expand
     - navigation.indexes
 repo_url: https://github.com/derekmurawsky/ansible-derekmurawsky-general
 nav:
   - Home: 'README.md'
-  - ADRs: "ADRs/README.md"
+  - ADRs: 
+    - Overview: "ADRs/README.md"
+    - "0000 Use MADRs": ADRs/0000-use-markdown-architectural-decision-records.md
+    - "0001 Use MKDocs": ADRs/0001-use-mkdocs-monorepo.md
+    - MADR Template: ADRs/adr-template.md
   - Playbooks: 
     - Overview: '!include ./playbooks/mkdocs.yml'
   - Roles:

@@ -13,6 +13,9 @@
   ansible.builtin.template:
     src: nginx.conf.j2
     dest: /etc/nginx/conf.d/proxmox.conf
+    owner: root
+    group: root
+    mode: 0644
     backup: true
   notify:
     - Restart nginx
@@ -21,11 +24,17 @@
 - name: Ensures /etc/systemd/system/nginx.service.d/ dir exists
   ansible.builtin.file:
     path: /etc/systemd/system/nginx.service.d/
+    owner: root
+    group: root
+    mode: 0755
     state: directory
 
 - name: Install nginx systemd override
   ansible.builtin.template:
     src: nginx.service.j2
     dest: /etc/systemd/system/nginx.service.d/local.conf
+    owner: root
+    group: root
+    mode: 0644
   notify:
     - Restart nginx

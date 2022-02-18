@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Derek Murawsky
   description: Basic proxmox bootstrap role
