@@ -37,5 +37,6 @@
         "virtualenv",
         "vmbr",
         "zipp"
-    ]
+    ],
+    "python.pythonPath": "/usr/bin/python3"
 }
