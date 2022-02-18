@@ -38,6 +38,11 @@ jobs:
       - name: Install dev dependencies
         run: python3 -m pip install -r ./requirements.txt
 
+      - name: Lint yaml
+        uses: karancode/yamllint-github-action@master
+        with:
+          yamllint_config_filepath: '.yamllint.yml'
+
       - name: Lint markdown
         uses: avto-dev/markdown-lint@v1
 
